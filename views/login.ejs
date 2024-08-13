@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    <div class="main">
+        <h1>AUTENTICACIÓN</h1>
+
+        <% if (successMessage) { %>
+            <p class="success-message"><%= successMessage %></p>
+        <% } %>
+
+        <h3>Ingrese su usuario y password</h3>
+        <form action="/login" method="POST">
+              <label for="first">
+                    Usuario:
+              </label>
+              <input type="text" 
+                     id="username" 
+                     name="username" 
+                     placeholder="Ingrese su usuario" required>
+
+              <label for="password">
+                    Password:
+              </label>
+              <input type="password"
+                     id="password" 
+                     name="password"
+                     placeholder="Ingrese su password" required>
+
+              <div class="wrap">
+                    <button type="submit">
+                          Enviar
+                    </button>
+              </div>
+        </form>
+        <p>Registrate
+              <a href="/register"
+                 style="text-decoration: none;">
+                    Crear cuenta
+              </a>
+        </p>
+  </div>
+
+
+</body>
+</html>
